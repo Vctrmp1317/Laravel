@@ -12,4 +12,10 @@ class Forum extends Model
     protected $fillable=['id','name','description'];
 
     protected $hidden=['password'];
+
+    public function posts(){
+    	return $this->hasMany(Post::class);
+    }
+
+  
 }

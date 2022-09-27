@@ -14,4 +14,11 @@ class ForumController extends Controller
 
         return view('forums.index',compact('forums'));
     }
+
+    public function show(Forum $forum)
+    {
+        $posts = $forum->posts()->with(['owner'])->paginate(2);
+      
+        return view('forums.detail', compact('forum','posts'));
+    }
 }
