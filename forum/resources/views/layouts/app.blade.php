@@ -25,6 +25,12 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+            @if(session('message'))
+                <div class="alert alert-{{ session('message')[0] }}">
+                    {{ session('message')[1] }}
+                </div>
+            @endif
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
