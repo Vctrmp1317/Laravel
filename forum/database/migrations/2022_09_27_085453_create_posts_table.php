@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->engine = "InnoDB";      // Esto permite escribir Relaciones y Claves Foráneas 
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');     // Creamos la columna que hará de clave foránea
             $table->foreign('user_id')->references('id')->on('users');    // Definición de la clave foránea
             $table->unsignedBigInteger('forum_id');     // Creamos la columna que hará de clave foránea

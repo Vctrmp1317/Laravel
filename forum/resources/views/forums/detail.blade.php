@@ -9,7 +9,7 @@
     	@forelse($posts as $post)
 
 	        <div class="panel panel-default">
-	            <div class="panel-heading">
+				<div class="panel-heading panel-heading-post">
 	            	<a href="../posts/{{ $post->id }}"> {{ $post->title }} </a>
 	            	<span class="pull-right">
 	            		{{ __("Owner") }}: {{ $post->owner->name }}

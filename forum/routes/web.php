@@ -18,3 +18,5 @@ Route::get('controlador/{name}','PruebaController@name');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/posts/{post}', 'PostController@show');
